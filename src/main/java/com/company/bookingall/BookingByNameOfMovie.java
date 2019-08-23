@@ -1,4 +1,4 @@
-package com.company.BookingAll;
+package com.company.bookingall;
 import com.company.model.Movie;
 import java.util.List;
 import java.util.Map;

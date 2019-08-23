@@ -5,15 +5,15 @@ public class Client {
     private String nameClient;
     private String surNameClient;
     private int age;
-    private String eMail;
+    private String email;
     private String  phoneNumber;
     private boolean statusStudent;
 
-    public Client(String nameClient, String surNameClient, int age, String eMail, String phoneNumber, boolean statusStudent) {
+    public Client(String nameClient, String surNameClient, int age, String email, String phoneNumber, boolean statusStudent) {
         this.nameClient = nameClient;
         this.surNameClient = surNameClient;
         this.age = age;
-        this.eMail = eMail;
+        this.email = email;
         this.phoneNumber = phoneNumber;
         this.statusStudent = statusStudent;
     }
@@ -43,11 +43,11 @@ public class Client {
     }
 
     public String geteMail() {
-        return eMail;
+        return email;
     }
 
-    public void seteMail(String eMail) {
-        this.eMail = eMail;
+    public void seteMail(String email) {
+        this.email = email;
     }
 
     public String getPhoneNumber() {
@@ -72,7 +72,7 @@ public class Client {
                 "nameClient='" + nameClient + '\'' +
                 ", surNameClient='" + surNameClient + '\'' +
                 ", age=" + age +
-                ", eMail='" + eMail + '\'' +
+                ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", statusStudent=" + statusStudent +
                 '}';

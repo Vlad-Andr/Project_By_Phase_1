@@ -1,12 +1,11 @@
 package com.company;
 
-
-import com.company.BookingAll.BookingByNameOfMovie;
+import com.company.relise.ReliseAllList;
 
 public class Main {
 
     public static void main(String[] args) {
-
-        BookingList.AppRelise();
+        ReliseAllList selectAllList = new ReliseAllList();
+        selectAllList.relise();
     }
 }
