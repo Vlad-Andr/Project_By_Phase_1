@@ -1,11 +1,11 @@
 package com.company;
 
 import com.company.relise.ReliseAllList;
+import com.company.relise.ReliseApp;
 
 public class Main {
 
     public static void main(String[] args) {
-        ReliseAllList selectAllList = new ReliseAllList();
-        selectAllList.relise();
+        ReliseApp.relise();
     }
 }
