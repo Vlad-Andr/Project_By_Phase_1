@@ -31,4 +31,8 @@ public class RagisterList {
             System.out.println("Error" + e);
         }
     }
+
+    public List<Client> getClients() {
+        return clients;
+    }
 }

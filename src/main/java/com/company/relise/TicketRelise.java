@@ -13,12 +13,15 @@ import static com.company.usinglist.MovieList.createSecondMovieList;
 public class TicketRelise {
     ReliseAllList reliseAllList = new ReliseAllList();
     RagisterList ragisterList = new RagisterList();
+    CaseList caseList = new CaseList();
     public List<Map<String, List<Movie>>> bookingMoviesList = new ArrayList<Map<String, List<Movie>>>();
+    public List<Client> clients = new ArrayList<>();
 
     public void ticket() {
         ragisterList.appRegister();
         CommandList.selectNextExecuting();
         reliseAllList.relise();
+        clients.add(0, ragisterList.clients.get(0));
         bookingMoviesList.add(reliseAllList.bookingMovieList.get(0));
         System.out.println("------------------------------------------------------");
         System.out.println("Your ticket : ");
@@ -27,52 +30,31 @@ public class TicketRelise {
         System.out.println("Your amount place is : " + reliseAllList.getScanPlace() + "\n");
         switch (reliseAllList.getScanNameMovie()) {
             case "Taxi 5":
-                if (ragisterList.clients.get(0).isStatusStudent()) {
-                    System.out.println("Price for ticket : " + (createSecondMovieList().get(0).getTicketPrice() - createSecondMovieList().get(0).getTicketPrice() * 0.10 * 0.15));
-                } else
-                    System.out.println("Price for ticket : " + (createSecondMovieList().get(0).getTicketPrice() - createSecondMovieList().get(0).getTicketPrice() * 0.15));
+                caseList.getTaxi();
                 break;
             case "Hancock":
-                if (ragisterList.clients.get(0).isStatusStudent()) {
-                    System.out.println("Price for ticket : " + (createSecondMovieList().get(1).getTicketPrice() - createSecondMovieList().get(1).getTicketPrice() * 0.10 * 0.07));
-                } else
-                    System.out.println("Price for ticket : " + (createSecondMovieList().get(1).getTicketPrice() - createSecondMovieList().get(1).getTicketPrice() * 0.07));
-                break;
-            case "King Lion":
-                System.out.println("Price for ticket : " + createSecondMovieList().get(2).getTicketPrice());
+                caseList.getHancock();
                 break;
             case "MIB":
-                if (ragisterList.clients.get(0).isStatusStudent()) {
-                    System.out.println("Price for ticket : " + (createSecondMovieList().get(3).getTicketPrice() - createSecondMovieList().get(3).getTicketPrice() * 0.10 * 0.07));
-                } else
-                    System.out.println("Price for ticket : " + (createSecondMovieList().get(3).getTicketPrice() - createSecondMovieList().get(3).getTicketPrice() * 0.07));
+                caseList.getMIB();
                 break;
             case "Inception":
-                if (ragisterList.clients.get(0).isStatusStudent()) {
-                    System.out.println("Price for ticket : " + (createSecondMovieList().get(4).getTicketPrice() - createSecondMovieList().get(4).getTicketPrice() * 0.10 * 0.15));
-                } else
-                    System.out.println("Price for ticket : " + (createSecondMovieList().get(4).getTicketPrice() - createSecondMovieList().get(4).getTicketPrice() * 0.15));
+                caseList.getInception();
                 break;
             case "Lara Croft":
-                if (ragisterList.clients.get(0).isStatusStudent()) {
-                    System.out.println("Price for ticket : " + (createFirstMovieList().get(0).getTicketPrice() - createFirstMovieList().get(0).getTicketPrice() * 0.10 * 0.15));
-                } else
-                    System.out.println("Price for ticket : " + (createFirstMovieList().get(0).getTicketPrice() - createFirstMovieList().get(0).getTicketPrice() * 0.15));
+                caseList.getLaraCroft();
                 break;
             case "Godzilla 2":
-                if (ragisterList.clients.get(0).isStatusStudent()) {
-                    System.out.println("Price for ticket : " + (createFirstMovieList().get(1).getTicketPrice() - createFirstMovieList().get(1).getTicketPrice() * 0.10 * 0.15));
-                } else
-                    System.out.println("Price for ticket : " + (createFirstMovieList().get(1).getTicketPrice() - createFirstMovieList().get(1).getTicketPrice() * 0.15));
+                caseList.getGodzilla2();
                 break;
             case "Shaft":
-                System.out.println("Price for ticket : " + createFirstMovieList().get(2).getTicketPrice());
+                caseList.getShaft();
                 break;
             case "Lord of the Rings":
-                System.out.println("Price for ticket : " + createFirstMovieList().get(3).getTicketPrice());
+                caseList.getLords();
                 break;
             case "John Weak 3":
-                System.out.println("Price for ticket : " + createFirstMovieList().get(4).getTicketPrice());
+                caseList.getJohnWeak3();
                 break;
         }
         System.out.println("------------------------------------------------------");

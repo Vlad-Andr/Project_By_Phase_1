@@ -1,6 +1,5 @@
 package com.company;
 
-import com.company.relise.ReliseAllList;
 import com.company.relise.ReliseApp;
 
 public class Main {
