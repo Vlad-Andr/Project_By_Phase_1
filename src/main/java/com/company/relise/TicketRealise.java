@@ -1,9 +1,9 @@
 package com.company.relise;
 
-public class TicketRelise {
-    ScanMovieAndPlace scanMovieAndPlace = new ScanMovieAndPlace();
-    SelectTicketPriceList selectTicketPriceList = new SelectTicketPriceList();
-    SelectAllInfoByClient select = new SelectAllInfoByClient();
+public class TicketRealise {
+    private ScanMovieAndPlace scanMovieAndPlace = new ScanMovieAndPlace();
+    private SelectTicketPriceList selectTicketPriceList = new SelectTicketPriceList();
+    private SelectAllInfoByClient select = new SelectAllInfoByClient();
 
     public void createTicket() {
         select.selectInfoByClient();
