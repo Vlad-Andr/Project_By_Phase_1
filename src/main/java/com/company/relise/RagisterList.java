@@ -1,6 +1,7 @@
 package com.company.relise;
 
 import com.company.model.Client;
+
 import java.util.ArrayList;
 import java.util.ConcurrentModificationException;
 import java.util.List;
@@ -25,8 +26,7 @@ public class RagisterList {
             boolean s6 = scanner.nextBoolean();
             System.out.println("Enter your age : ");
             int s3 = scanner.nextInt();
-
-            clients.add(0,new Client(s1, s2, s3, s4, s5, s6));
+            clients.add(0, new Client(s1, s2, s3, s4, s5, s6));
         } catch (ConcurrentModificationException e) {
             System.out.println("Error" + e);
         }

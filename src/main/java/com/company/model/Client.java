@@ -6,7 +6,7 @@ public class Client {
     private String surNameClient;
     private int age;
     private String email;
-    private String  phoneNumber;
+    private String phoneNumber;
     private boolean statusStudent;
 
     public Client(String nameClient, String surNameClient, int age, String email, String phoneNumber, boolean statusStudent) {

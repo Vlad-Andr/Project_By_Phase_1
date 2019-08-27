@@ -1,11 +1,12 @@
 package com.company.usinglist;
+
 import com.company.model.Movie;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MovieList {
-
     public static List<Movie> createFirstMovieList() {
         List<Movie> movies1 = new ArrayList<>();
         movies1.add(new Movie("Lara Croft", HallList.createHallList().get(0), "translate", "available", 140, LocalDate.of(2019, 3, 29), LocalDate.of(2019, 9, 15), 125.0, "action"));
