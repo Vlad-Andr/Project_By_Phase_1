@@ -1,6 +1,5 @@
 package com.company.relise;
 
-import com.company.model.Client;
 import com.company.model.Movie;
 
 import java.util.ArrayList;
@@ -13,13 +12,13 @@ import java.util.stream.Stream;
 import static com.company.usinglist.MovieList.createFirstMovieList;
 import static com.company.usinglist.MovieList.createSecondMovieList;
 
-public class ReliseAllList {
+public class ScanMovieAndPlace {
     public List<Map<String, List<Movie>>> bookingMovieList = new ArrayList<Map<String, List<Movie>>>();
     Scanner scanner = new Scanner(System.in);
     private String scanNameMovie;
     private int scanPlace;
 
-    public void relise() {
+    public void setMovieAndPlace() {
         System.out.println("Enter the name of movie if you want to watch : \n");
         scanNameMovie = scanner.nextLine();
         Map<String, List<Movie>> bookingMovie = Stream.concat(createSecondMovieList().stream(), createFirstMovieList().stream())
